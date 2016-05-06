@@ -1,2 +1,3 @@
 # hello-world
-short description
+
+My first commit in github.
