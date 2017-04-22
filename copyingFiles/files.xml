@@ -1,0 +1,17 @@
+<files>
+    <file>
+        <name>3.0.png</name>
+        <pathFrom>from/</pathFrom>
+        <pathTo>to/</pathTo>
+    </file>
+    <file>
+        <name>file.gif</name>
+        <pathFrom>from/</pathFrom>
+        <pathTo>to/</pathTo>
+    </file>
+    <file>
+        <name>foxit.exe</name>
+        <pathFrom>from/</pathFrom>
+        <pathTo>to/</pathTo>
+    </file>
+</files>
