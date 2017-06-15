@@ -1,13 +1,35 @@
 import sys
 import getopt
 
+def string_to_list(str):
+    lst = []
+    str_pure = str
+    for sym in str_pure:
+        lst.append(sym)
+    return lst
+
+def bubble_sort(str):
+    str_sorted = string_to_list(str)
+    length = len(str)
+    is_sorted = False
+    while is_sorted == False:
+        is_sorted = True
+        for i in range (0, length - 1):
+            if str_sorted[i] > str_sorted[i+1]:
+                buf = str_sorted[i]
+                str_sorted[i] = str_sorted[i+1]
+                str_sorted[i+1] = buf
+                is_sorted = False
+    str_sorted = "".join(str_sorted)
+    return str_sorted
+
 
 def distinct_on_symbols_of(str):
     distinct_symbols = ""
     for sym in str:
         if distinct_symbols.find(sym) == -1:
             distinct_symbols = "%s%s" % (distinct_symbols, sym)
-            #distinct_symbols = bubble_sort(distinct_symbols)
+            distinct_symbols = bubble_sort(distinct_symbols)
     return distinct_symbols
 
 
@@ -29,8 +51,8 @@ def common_symbols_of(a, b):
 
 
 def main():
-    a = "askdjfp9283rj9jf[2213\v\23]v\12v5\]1v2[]\15v\12b3[5\]2p45p\b2p315bp123ov5p12o3[c5\1234\5c1\23c4"
-    b = "]2vj12\5v\12\v\jvp12jv123\4\v2v3\n\\\q4bb[5ib902ubm 5qbm9m5w c8ewq -89 -98 sa980df80 hsa0 a8a8 s0d7f h8a s0h"
+    a = "askdjfp9283rj9jf[2213v23]v12v5]1v2[]15v12b3[5]2p45pb2p315bp123ov5p12o3[c512345c123c4- "
+    b = "]2vj125v12vjvp12jv1234v2v3nq4bb[5ib902ubm 5qbm9m5w c8ewq -89 -98 sa980df80 hsa0 a8a8 s0d7f h8a s0h"
     print repr(common_symbols_of(a, b))
 
 
