@@ -1,3 +1,3 @@
 # hello-world
 
-My first commit in github.
+This is repository of little nano-projects on different languages 
